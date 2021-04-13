@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <title>HOME</title>
+     <h1><b> <center>KERALA TOURISM</center></b</h1>
+    <link rel="stylesheet"href="css\style.css">
+     <body background="C:\Users\nidhin\Desktop\FULL STACK DEVELOPER\kerala\css\pictures\kerala.jpg"style="background-repeat:no repeat">
+    </body>
+    
+</head>
+<!--Login form-->
+<div class="container-fluid">
+    <form class="login" onsubmit="return !!(trigger() & validate() & emailvalidate());"action="index.html">
+        <h2>Log In</h2>
+        <br>
+        <div>
+            <label>Email ID</label>
+            <input type="email" placeholder="Email Id" id="email"onkeyup="emailvalidate();">
+            <label id="error1" hidden>Field is empty</label>
+            <br>
+            <label>Password</label>
+            <input type="password" placeholder="Minimum 8 characters" id="pwd"onkeyup="trigger();"><br>
+            <label id="error2" hidden>Field is empty</label>
+            
+         <div class="indicator">
+    
+           <span class="weak"></span>
+           <span class="medium"></span>
+           <span class="strong"></span>
+         </div>
+         <div class="text">
+
+         </div>
+         <button>LOGIN</button>
+          
+     <br>
+         <p> If you don't have any account?<a href="./sign.html">Sign UP</a></p>
+         
+        </div>
+    </div>
+    </form>
+    <!--Login form end-->
+
+<footer>
+    <div class="next">
+    <a href="index.html" target="blank"><center>NEXT</center></a>
+    </div>
+   
+</footer> 
+​<script src="main.js"></script>
+</html>
