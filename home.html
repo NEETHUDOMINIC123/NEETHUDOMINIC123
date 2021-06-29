@@ -1,51 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-     <title>HOME</title>
-     <h1><b> <center>KERALA TOURISM</center></b</h1>
-    <link rel="stylesheet"href="css\style.css">
-     <body background="C:\Users\nidhin\Desktop\FULL STACK DEVELOPER\kerala\css\pictures\kerala.jpg"style="background-repeat:no repeat">
-    </body>
-    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <body background="C:\Users\nidhin\Desktop\FULL STACK DEVELOPER\kerala\pictures\kerala.jpg"style="background-repeat:no repeat">
+        
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
 </head>
-<!--Login form-->
-<div class="container-fluid">
-    <form class="login" onsubmit="return !!(trigger() & validate() & emailvalidate());"action="index.html">
-        <h2>Log In</h2>
-        <br>
-        <div>
-            <label>Email ID</label>
-            <input type="email" placeholder="Email Id" id="email"onkeyup="emailvalidate();">
-            <label id="error1" hidden>Field is empty</label>
-            <br>
-            <label>Password</label>
-            <input type="password" placeholder="Minimum 8 characters" id="pwd"onkeyup="trigger();"><br>
-            <label id="error2" hidden>Field is empty</label>
-            
-         <div class="indicator">
-    
-           <span class="weak"></span>
-           <span class="medium"></span>
-           <span class="strong"></span>
-         </div>
-         <div class="text">
 
-         </div>
-         <button>LOGIN</button>
+    <header>
+
+        <div class="head-tag">
+            <a href="index.html"target="blank">Home</a>
+            <a href="home.html"target="blank">Login</a>
+             
+            <a href="sign.html"target="blank">Sign Up</a>
+            <a href="#">Sign Out</a>
           
-     <br>
-         <p> If you don't have any account?<a href="./sign.html">Sign UP</a></p>
-         
         </div>
-    </div>
-    </form>
-    <!--Login form end-->
-
-<footer>
-    <div class="next">
-    <a href="index.html" target="blank"><center>NEXT</center></a>
-    </div>
+    
    
+
+ </header>
+
+ <div class="container-fluid">
+ <form class="loginform col-md-3" action="./districts.html" onsubmit="return !!(emailvalidate() & pwdlength());">
+      <h2>Log In</h2>
+      <div class="input">
+      <label>EMAIL ID:</label><br>
+      <input type="text" placeholder="Email Id" id="Email" onkeyup="emailvalidate();">
+      <label id="error1" hidden>field is empty</label>
+      <br>
+      <br>
+      <label>PASSWORD:</label><br>
+      <input type="password"  placeholder="Minimum 8 character " id="pwd" onkeyup="pwdlength();" >
+      <label id="error2" hidden>field is empty</label>
+      <div class="indicator">
+        
+        <span class="weak"></span>
+        <span class="medium"></span>
+        <span class="strong"></span>
+      </div>
+<div class="text" >
+</div>
+        
+<br>
+    <p>If you don't have any account ? <a href="./signup.html">SignIn</a></p>
+    <button>Login</button>
+  </div>
+  
+    </div>
+  </form>
+
+ <br>
+  <br>
+<footer class="loginfooter col-md-12" >
 </footer> 
-​<script src="main.js"></script>
+</div>
+<script src="js/main.js"></script>
+</body>
 </html>
+

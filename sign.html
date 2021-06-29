@@ -1,99 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>sign</title>
-    <link rel="stylesheet"href="../FULL STACK DEVELOPER/kerala/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <body background="C:\Users\nidhin\Desktop\FULL STACK DEVELOPER\kerala\pictures\tourist.jpg"style="background-repeat:no repeat"></body>
+   
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script> </head>
-
-<body background="C:\Users\nidhin\Desktop\FULL STACK DEVELOPER\kerala\css\pictures\ernklm.jpg"style="background-repeat:no repeat">    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
 </head>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-danger">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Kerala Tourism</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="home.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">About us</a>
-          </li>
-          <li class="nav-item ó">
-            <a class="nav-link" href="index.html">login</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="districts.html">districts</a>
-        </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="Sign.html" tabindex="-1" aria-disabled="true">signup</a>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+
+  <div class="container-fluid g-0 ">
+  <header>
+
+    <header>
+
+      <div class="head-tag">
+          <a href="index.html"target="blank">Home</a>
+          <a href="home.html"target="blank">Login</a>
+           
+          <a href="sign.html"target="blank">Sign Up</a>
+          <a href="#">Sign Out</a>
+        
+      </div>
+  </header>
+  <br>
+       <!-- form -->
+    <form action="./home.html" class="row g-3 col-md-6 signinform" onsubmit="return !!(trigger() & validate() & emailvalidate() & numbervalidate());">
+      <h2 class="col-md-9">Sign In</h2>
+       <!-- Namebar -->
+        <div class="row g-3">
+            <div class="col-md-6">
+                <label for="inputname" class="form-label">Name</label>
+              <input type="text" class="form-control" placeholder="firstname" id="firstname" aria-label="First name" >
+              <label id="error3" hidden>field is empty</label>
+      
+            </div>
+            <div class="col-md-3">
+                <label for="visually-hidden" class="form-label">Last Name</label>
+              <input type="text" class="form-control" placeholder="Last name" id="lastname" aria-label="Last name" >
+              <label id="error4" hidden>field is empty</label>
+              
+            </div>
+          </div>
+          <!-- /Namebar -->
+        
+        
+          <!-- Addressbar -->
+        <div class="col-md-9">
+          <label for="inputAddress" class="form-label">Address</label>
+          <input type="text" class="form-control" id="Address" placeholder=" Address"  >
+          <label id="error5" hidden>field is empty</label>
+          
+        </div>
+        <!-- /Addressbar -->
+        <!--phone number  -->
+        <div class="col-md-9">
+          <label for="phonenumber" class="form-label">Phone number</label>
+          <input type="text"  id="number" placeholder=" Phonenumber" onkeyup="numbervalidate(); showlist();"   class="form-control">
+          <label id="error6" hidden>field is empty</label>
+        </div>
+        <div class="col-md-9">
+          <ul style="color: white;  font-size: 1em; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" id="list" hidden> Valid Phonenumber Methods
+            <li> XXX-XXX-XXXX</li>
+            <li>XXX.XXX.XXXX </li>
+            <li>XXX XXX XXXX </li>
+          </ul>
+        </div>
+        <!-- /phonenumber -->
+       
+        <!-- Emailbar -->
+        <div class="col-md-5">
+          <label>EMAIL ID:</label><br>
+          <input type="text" placeholder="Email Id" id="Email" onkeyup="emailvalidate();" class="form-control">
+          <label id="error1" hidden>field is empty</label>
+          </div>
+          <!-- /Emailbar -->
+          <!-- Passwordbar -->
+          <div class="col-md-4">
+            <label>PASSWORD:</label><br>
+            <input type="password"  placeholder="Minimum 8 character " id="pwd" onkeyup="trigger();" class="form-control" >
+            <label id="error2" hidden>field is empty</label>
+            <div class="indicator">
+              
+              <span class="weak"></span>
+              <span class="medium"></span>
+              <span class="strong"></span>
+            </div>
+      <div class="text" >
+      </div>
+              
+          </div>
+          <!-- /Password -->
+          <!-- Checkbox -->
+        <div class="col-md-6">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+              Check me out
+            </label>
+          </div>
+        </div>
+        <!-- /Chekbox -->
+        <!-- Signin -->
+        <div class="col-md-12">
+          <button type="submit" class="btn btn-primary">Sign in</button>
+        </div>
+        <!-- /Signin -->
+      </form>
+    <!-- /form -->
+    <div class="row">
+      <div class="col-md-4">
+    <div class="signcard ">
+      <div class="card" style="width: 25rem;">
+        <div class="card-body">
+          
       </div>
     </div>
-  </nav>
-  <h2><b><center> SIGN UP</center></b></h2>
-  <div class="tm-row">
-   <div class="tm-col-left"></div>
-    <main class="tm-col-right tm-contact-main"> <!-- Content -->
-        <section class="tm-content tm-contact">
-            <h2 class="mb-4 tm-content-title">Welcome...!</h2>
-            <p class="mb-85">Please enter the details to signup.</p>
-            <form class="contact-form" onsubmit="return !!(validatephonenumber() & trigger() & validate() & emailvalidate());"action="home.html">
-                <div class="form-group mb-4">
-                    <label for="exampleUsername" class="form-label"> User Name</label>
-                    <input type="text" name="name" class="form-control" placeholder="Please enter a userame"/>
-                </div>
-                <div class="form-group mb-4">
-                    <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" id="email" class="form-control" placeholder="Your email id"/>
-                </div>
-                <div class="form-group mb-4">
-                  <label for="phone" class="form-label"> Phone Number</label>
-                  <input type="tel" id="number" class="form-control" placeholder="Please enter a phone number"/>
-                  
-              
-                </div>
-                
-                <div class="form-group mb-4">
-                    <label for="exampleInputEmail1" class="form-label">Password</label>
-                    <input type="password" id="pwd" class="form-control" placeholder="Enter a password"id="pwd" onkeyup="trigger();"/>
-                    <br>
-                    <div class="indicator">
-                     <span class="indicator"></span>
-                     <span class="medium"></span>
-                     <span class="strong"></span>
-                     <div class="text"></div>
-      
-                  </div>
-                <div class="form-group mb-4">
-                    <label for="exampleInputEmail1" class="form-label">Re-enter Password</label>
-                    <input type="password" id="password2" class="form-control" placeholder="Re-enter password"/>
-                </div>
-                 <br>
-                
-                <div class="text-left">
-                    <button type="submit" class="btn btn-big btn-primary">Signup</button>
-                </div>
-                <br>
-                <div class="text-left">
-                    <a href="index.html" class="mb-85">I have an account..</a>
-                </div>
-            </form>
-        </section>
-    </main>
-</div>
-</div>  
-​<script src="kerala/js/sign.js"></script> 
+    </div>
+    <!-- /card -->
+  </div>
+    <br>
+    <footer class="signfooter" >
+     
+    
+    </footer>
+
+    <script src="js/sign.js"></script>
 </body>
+</div>
 </html>
